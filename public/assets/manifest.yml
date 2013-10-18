@@ -77,10 +77,10 @@ webicons/webicon-pinterest-s.png: webicons/webicon-pinterest-s-0368338f210bdf88d
 webicons/webicon-pinterest-s/index.png: webicons/webicon-pinterest-s-0368338f210bdf88dd0c3e0575611661.png
 webicons/webicon-pinterest.png: webicons/webicon-pinterest-a7c3b3d4da64317d7eeb803be7e11737.png
 webicons/webicon-pinterest/index.png: webicons/webicon-pinterest-a7c3b3d4da64317d7eeb803be7e11737.png
-application.js: application-522497a39c8fa0cb0ccb91468c1e989f.js
-application/index.js: application-522497a39c8fa0cb0ccb91468c1e989f.js
-application.css: application-464a7cf4ceeeae1e056b820cb46afe69.css
-application/index.css: application-464a7cf4ceeeae1e056b820cb46afe69.css
+application.js: application-4299bcf9713afd53227c2d715040d4e4.js
+application/index.js: application-4299bcf9713afd53227c2d715040d4e4.js
+application.css: application-f60a8b497f2c18e1d66df4f6e25bf2e2.css
+application/index.css: application-f60a8b497f2c18e1d66df4f6e25bf2e2.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 normalize-rails/index.css: normalize-rails/index-6b9b8e0a9bd505c11c5ecd4f848a5299.css
@@ -97,6 +97,8 @@ foundation-icons.woff: foundation-icons-7d52a6549eed6be4f0ba30900a7bd6a6.woff
 foundation-icons/index.woff: foundation-icons-7d52a6549eed6be4f0ba30900a7bd6a6.woff
 modernizr.js: modernizr-3fd836b133d0d6f7c6cf2a423c69e11e.js
 modernizr/index.js: modernizr-3fd836b133d0d6f7c6cf2a423c69e11e.js
+highcharts.js: highcharts-ae7e5888ffb331380901d82655886918.js
+highcharts/index.js: highcharts-ae7e5888ffb331380901d82655886918.js
 vendor/custom.modernizr.js: vendor/custom.modernizr-a7d5258f68c42509cd151b5d3ebb9aa9.js
 vendor/custom/index.modernizr.js: vendor/custom.modernizr-a7d5258f68c42509cd151b5d3ebb9aa9.js
 vendor/zepto.js: vendor/zepto-48e193dc43051fbe2c03c6276f1f5ff1.js
