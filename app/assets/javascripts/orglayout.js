@@ -1,4 +1,5 @@
 
+
 // text resizer:
 $(function() {
     var span = $('#my-resizer');
@@ -15,6 +16,7 @@ $(function() {
 
 
 $(document).ready(function(){
+  console.log("is this running?")
 
 
 // info tabs and buttons:
