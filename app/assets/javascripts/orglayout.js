@@ -16,8 +16,6 @@ $(function() {
 
 
 $(document).ready(function(){
-    $('#piechart').hide()
-    $('#piechart2').hide()
 
 // info tabs and buttons:
 
