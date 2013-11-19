@@ -14,7 +14,6 @@ $(function() {
 });
 
 
-
 $(document).ready(function(){
 
 // info tabs and buttons:
@@ -30,7 +29,7 @@ $(document).ready(function(){
     $('#piechart').hide()
     $('#piechart2').hide()
     $('#youtube-panel').show()
-    ('#twitter-panel').show()
+    $('#twitter-panel').show()
 
   });
 
@@ -57,7 +56,8 @@ $(document).ready(function(){
     $('#piechart2').show()
     $('#youtube-panel').hide()
     $('#twitter-panel').hide()
-    $('#piechart').resize();
+    $('#piechart').resize()
+    $('#piechart2').resize()
   });
 
 
