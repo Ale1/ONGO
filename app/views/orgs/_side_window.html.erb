@@ -3,9 +3,19 @@
   <div class='org-floaters'><%=t(:Last_updated)+": "+@org.updated_at.strftime("%d %b %Y") %></div>
   
 
-<%= @chart %>
-<div class="org-side-window-panel" id="piechart"></div>
-<script>  $(function() { $('#piechart').hide() });</script>
+<div class="org-side-window-panel" id="piechart">
+
+      <%= high_chart("some_random_id", @funding_chart) do |c| %>
+          <%= raw "options.tooltip.formatter = function() {return this.point.name +'</b>: '+ this.y +' %';}"  %>
+          <%= raw "options.plotOptions.pie.dataLabels.formatter = function() { if (this.y > 5) return this.point.name; }"  %>
+      <% end %>
+</div>
+
+<div class="org-side-window-panel" id="piechart2">
+      <%= high_chart("some_random_other_id", @other_chart) %>
+</div>
+
+
 
 
   <%if @org.has_valid_youtube? %>

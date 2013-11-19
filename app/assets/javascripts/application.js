@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require foundation
-//= require highcharts
+//= require highcharts/highcharts                                                           
+//= require highcharts/highcharts-more  

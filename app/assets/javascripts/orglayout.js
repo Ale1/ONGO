@@ -16,8 +16,8 @@ $(function() {
 
 
 $(document).ready(function(){
-  console.log("is this running?")
-
+    $('#piechart').hide()
+    $('#piechart2').hide()
 
 // info tabs and buttons:
 
@@ -30,6 +30,7 @@ $(document).ready(function(){
     $("#org-team").hide()
     $("#org-affiliations").hide()
     $('#piechart').hide()
+    $('#piechart2').hide()
     $('#youtube-panel').show()
     ('#twitter-panel').show()
 
@@ -43,6 +44,7 @@ $(document).ready(function(){
     $("#org-team").hide()
     $("#org-affiliations").hide()
     $('#piechart').hide()
+    $('#piechart2').hide()
     $('#youtube-panel').show()
     $('#twitter-panel').show()
   });
@@ -54,8 +56,10 @@ $(document).ready(function(){
     $("#org-team").hide()
     $("#org-affiliations").hide()
     $('#piechart').show()
+    $('#piechart2').show()
     $('#youtube-panel').hide()
     $('#twitter-panel').hide()
+    $('#piechart').resize();
   });
 
 
@@ -66,6 +70,8 @@ $(document).ready(function(){
     $("#org-team").show()
     $("#org-affiliations").hide()
     $('#piechart').hide()
+    $('#piechart2').hide()
+    $('#youtube-panel').show()
     $('#twitter-panel').show()
   });
 
@@ -76,6 +82,7 @@ $(document).ready(function(){
     $("#org-team").hide()
     $("#org-affiliations").show()
     $('#piechart').hide()
+    $('#piechart2').hide()
     $('#youtube-panel').show()
     $('#twitter-panel').show()
   });

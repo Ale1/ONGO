@@ -35,13 +35,46 @@ respond_to :html, :xml, :json, :csv
     @org = Org.find(params[:id])
     @primary_prov = @org.primary_province
 
-  @chart = Highcharts.new do |chart|
-    chart.chart(renderTo: 'piechart')
-    chart.title('Example Chart')
-    chart.series(name: 'Funding', type: 'pie', data: [['government',20],['Private',10],['Corporate',70]])
-    chart.credits(enabled: false)
-  end
 
+    @funding_chart = LazyHighCharts::HighChart.new('pie') do |f|
+      f.chart({:defaultSeriesType=>"pie" , :margin=> [0, 0, 100,0], :renderTo=>'piechart', :width=>'300' })
+      series = {
+               :type=> 'pie',
+               :name=> 'Browser share',
+               :data=> [
+                  ['Private',   45.0],
+                  ['Government',       26.8],
+                  ['Corporate',    8.5],
+                  ['Other',     6.2],
+               ]
+      }
+      f.series(series)
+      f.options[:title][:text] = "Funding Sources"
+      f.legend(:layout=> 'vertical',:style=> {:left=> 'auto', :bottom=> 'auto',:right=> 'auto',:top=> 'auto'}) 
+      f.plot_options(:pie=>{
+        :allowPointSelect=>true, 
+        :cursor=>"pointer" , 
+        :dataLabels=>{
+          :enabled=>true,
+          :color=>"black",
+          :style=>{
+            :font=>"13px Trebuchet MS, Verdana, sans-serif"
+          }
+        }
+      })
+    end
+
+
+    @other_chart = LazyHighCharts::HighChart.new('bar') do |f|
+      f.chart({:renderTo=>'piechart2', :width=>'300'})
+      f.series(:name=>'John',:data=> [3, 20, 3, 5])
+      f.series(:name=>'Jane',:data=>[1, 3, 4, 3] )
+      f.xAxis(:categories=>['Apples', 'Oranges','bycicle','sausages'])   
+      f.title({ :text=>"Example bar chart title"})
+      f.options[:chart][:defaultSeriesType] = "bar"
+      f.plot_options({:series=>{:stacking=>"percent"}})
+      f.plot_options({:bar=>{:dataLabels=>{:enabled => true}}})
+    end
 
     respond_with(@org) do |format|
       format.html { render }
